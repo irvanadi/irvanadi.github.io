@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.animation-underline {
+	@apply relative bg-gradient-to-br from-white to-[#AAAAAA] bg-clip-text p-1 font-extrabold text-transparent after:absolute after:bottom-[-4px] after:left-0 after:h-1 after:rounded-full after:w-full after:origin-bottom-right after:scale-x-0 after:bg-cyan-400 after:transition-transform after:duration-300 after:content-[''] hover:after:origin-bottom-left hover:after:scale-x-100;
+}
+
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
