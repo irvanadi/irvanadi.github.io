@@ -8,8 +8,22 @@ import { Button } from "@/components/ui/button";
 
 export function ContactSection() {
 	return (
-		<AnimatedSection className="py-20 px-8 sm:px-20 bg-black/20">
-			<div className="max-w-4xl mx-auto text-center">
+		<AnimatedSection className="relative py-20 px-8 sm:px-20 overflow-hidden">
+			{/* Professional background with call-to-action emphasis */}
+			<div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-gray-900 to-slate-900"></div>
+			<div className="absolute inset-0">
+				<div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+				<div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-950 to-transparent"></div>
+			</div>
+			{/* Radial pattern overlay */}
+			<div
+				className="absolute inset-0 opacity-[0.03]"
+				style={{
+					backgroundImage: `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+					backgroundSize: "30px 30px",
+				}}
+			></div>
+			<div className="relative max-w-4xl mx-auto text-center">
 				<AnimatedElement animation="fadeInUp">
 					<h2 className="text-4xl font-bold text-white mb-8">
 						Let&apos;s Work Together

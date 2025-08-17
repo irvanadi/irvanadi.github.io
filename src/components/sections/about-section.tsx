@@ -12,12 +12,25 @@ import {
 export function AboutSection() {
 	return (
 		<AnimatedSection
-			className="py-20 px-8 sm:px-20 bg-black/20 snap-center about"
+			className="relative py-20 px-8 sm:px-20 snap-center about overflow-hidden"
 			id="about"
 			stagger={true}
 			delay={0.2}
 		>
-			<div className="max-w-6xl mx-auto">
+			{/* Professional background with subtle texture */}
+			<div className="absolute inset-0 bg-gradient-to-b from-slate-900/95 to-gray-900/95"></div>
+			<div className="absolute inset-0 opacity-10">
+				<div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+				<div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_75%_75%,rgba(167,139,250,0.1),transparent_50%)]"></div>
+			</div>
+			{/* Subtle pattern overlay */}
+			<div
+				className="absolute inset-0 opacity-[0.03]"
+				style={{
+					backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+				}}
+			></div>
+			<div className="relative max-w-6xl mx-auto">
 				<AnimatedElement animation="fadeInUp">
 					<h2 className="text-4xl font-bold text-white text-center mb-16">
 						About Me
@@ -27,11 +40,11 @@ export function AboutSection() {
 					<div>
 						<AnimatedElement animation="fadeInLeft" delay={0.3}>
 							<p className="text-gray-300 text-lg leading-relaxed mb-6">
-								I&apos;m a dedicated frontend developer with 3 years of hands-on
-								experience building scalable web and mobile applications. My
-								journey began with a passion for creating intuitive user
-								interfaces and has evolved into expertise across the full
-								development stack.
+								Hi I&apos;m Irvan Adi Santoso an dedicated technical consultant
+								& software developer with 2+ years of hands-on experience
+								building scalable web and mobile applications. My journey began
+								with a passion for creating intuitive user interfaces and has
+								evolved into expertise across the full development stack.
 							</p>
 						</AnimatedElement>
 						<AnimatedElement animation="fadeInLeft" delay={0.5}>
@@ -82,7 +95,7 @@ export function AboutSection() {
 										Experience
 									</h3>
 									<p className="text-gray-400">
-										3+ Years in Frontend Development
+										2+ Years in Frontend Development
 									</p>
 								</div>
 							</AnimatedElement>

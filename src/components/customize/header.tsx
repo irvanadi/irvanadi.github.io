@@ -20,15 +20,15 @@ const Header: React.FC<React.ComponentProps<"header">> = ({ ...props }) => {
 						</span>
 						<div className="flex items-center space-x-3">
 							<div className="relative">
-								<Image
+								{/* <Image
 									src={file}
 									alt="Your Portfolio"
 									className="h-10 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+								/> */}
+								<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-white rounded-full blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
 							</div>
-							<span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-								Portfolio
+							<span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-white bg-clip-text text-transparent">
+								Irvan Adi Portfolio
 							</span>
 						</div>
 					</a>
@@ -42,7 +42,7 @@ const Header: React.FC<React.ComponentProps<"header">> = ({ ...props }) => {
 					>
 						<span className="relative z-10">About</span>
 						<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 w-0 group-hover:w-full transition-all duration-300"></div>
+						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-white  w-0 group-hover:w-full transition-all duration-300"></div>
 					</a>
 					<a
 						href="#skills"
@@ -50,7 +50,7 @@ const Header: React.FC<React.ComponentProps<"header">> = ({ ...props }) => {
 					>
 						<span className="relative z-10">Skills</span>
 						<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 w-0 group-hover:w-full transition-all duration-300"></div>
+						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-white  w-0 group-hover:w-full transition-all duration-300"></div>
 					</a>
 					<a
 						href="#experience"
@@ -58,7 +58,7 @@ const Header: React.FC<React.ComponentProps<"header">> = ({ ...props }) => {
 					>
 						<span className="relative z-10">Experience</span>
 						<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 w-0 group-hover:w-full transition-all duration-300"></div>
+						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-white  w-0 group-hover:w-full transition-all duration-300"></div>
 					</a>
 					<a
 						href="#projects"
@@ -66,11 +66,11 @@ const Header: React.FC<React.ComponentProps<"header">> = ({ ...props }) => {
 					>
 						<span className="relative z-10">Projects</span>
 						<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 w-0 group-hover:w-full transition-all duration-300"></div>
+						<div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-white  w-0 group-hover:w-full transition-all duration-300"></div>
 					</a>
 
 					{/* CTA Button */}
-					<Button className="ml-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
+					<Button className="ml-4 bg-gradient-to-r from-cyan-500 to-purple-500/20 hover:from-cyan-600 hover:to-purple-500/20  text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
 						Contact Me
 					</Button>
 				</div>

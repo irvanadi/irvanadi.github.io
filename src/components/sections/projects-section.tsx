@@ -24,11 +24,35 @@ import {
 	MotionHighlight,
 	MotionHighlightItem,
 } from "@/components/animate-ui/effects/motion-highlight";
+import { Button } from "../ui/button";
+import icAppstore from "~/public/appstore_icon.png";
+import icPlaystore from "~/public/playstore_icon.png";
+import icEssy from "~/public/essy.png";
+import icIntegra from "~/public/integra.jpg";
+import icMidsuit from "~/public/midsuit.jpg";
 
 export function ProjectsSection() {
 	return (
-		<AnimatedSection className="py-20 px-8 sm:px-20 projects" id="projects">
-			<div className="max-w-6xl mx-auto">
+		<AnimatedSection
+			className="relative py-20 px-8 sm:px-20 projects overflow-hidden"
+			id="projects"
+		>
+			{/* Professional background with technology-inspired elements */}
+			<div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-slate-900 to-gray-950"></div>
+			<div className="absolute inset-0">
+				<div className="absolute top-1/4 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
+				<div className="absolute bottom-1/4 right-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl"></div>
+				<div className="absolute top-0 right-1/3 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl"></div>
+			</div>
+			{/* Circuit-like pattern overlay */}
+			<div
+				className="absolute inset-0 opacity-[0.015]"
+				style={{
+					backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0,60 L30,60 L30,30 L60,30 L60,60 L90,60 L90,90 L120,90'/%3E%3Cpath d='M60,0 L60,30 M60,60 L60,90 M60,90 L60,120'/%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3Ccircle cx='60' cy='60' r='3'/%3E%3Ccircle cx='90' cy='90' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
+					backgroundSize: "120px 120px",
+				}}
+			></div>
+			<div className="relative max-w-6xl mx-auto">
 				<AnimatedElement animation="fadeInUp">
 					<h2 className="text-4xl font-bold text-white text-center mb-16">
 						Featured Projects
@@ -47,16 +71,17 @@ export function ProjectsSection() {
 								<Card className="bg-white/5 border-white/10">
 									<CardHeader>
 										<CardTitle className="text-white">
-											E-Commerce Mobile App
+											Human Capital Management - ESSY
 										</CardTitle>
 										<CardDescription className="text-gray-400">
-											React Native • Node.js
+											React Native • Java
 										</CardDescription>
 									</CardHeader>
 									<CardContent className="pt-4">
 										<p className="text-gray-300 mb-4">
-											Cross-platform mobile app with payment integration,
-											real-time notifications, and offline capabilities.
+											A comprehensive cross-platform e-commerce solution built
+											with React Native and Java, featuring real-time
+											notifications.
 										</p>
 										<div className="flex flex-wrap gap-2">
 											<span className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs">
@@ -65,8 +90,8 @@ export function ProjectsSection() {
 											<span className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-xs">
 												Node.js
 											</span>
-											<span className="bg-orange-600/20 text-orange-300 px-2 py-1 rounded text-xs">
-												MongoDB
+											<span className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs">
+												PostgreSQL
 											</span>
 										</div>
 									</CardContent>
@@ -77,31 +102,23 @@ export function ProjectsSection() {
 						<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 border-gray-700">
 							<DialogHeader>
 								<DialogTitle className="text-2xl font-bold text-white mb-4">
-									E-Commerce Mobile App
+									Human Capital Management - ESSY
 								</DialogTitle>
 								<DialogDescription className="text-gray-300 text-base">
 									A comprehensive cross-platform e-commerce solution built with
-									React Native
+									React Native and Java, featuring real-time notifications.
 								</DialogDescription>
 							</DialogHeader>
 							<div className="space-y-6">
-								<div className="relative w-full h-64 rounded-lg overflow-hidden">
-									<Image
-										src="/projects/ecommerce-app.svg"
-										alt="E-Commerce Mobile App Screenshot"
-										fill
-										className="object-cover"
-									/>
+								<div className="relative rounded-lg overflow-hidden justify-center items-center flex">
+									<Image src={icEssy} alt="Human Capital Management - ESSY" />
 								</div>
 								<div>
 									<h4 className="text-lg font-semibold text-white mb-3">
 										Key Features & Tasks Handled:
 									</h4>
 									<ul className="space-y-2 text-gray-300">
-										<li>
-											• Implemented secure payment gateway integration with
-											Stripe and PayPal
-										</li>
+										<li>• Implemented multiple client feature</li>
 										<li>
 											• Developed real-time push notifications system for order
 											updates
@@ -118,22 +135,51 @@ export function ProjectsSection() {
 											• Implemented user authentication and authorization with
 											JWT
 										</li>
-										<li>
-											• Developed product catalog with advanced filtering and
-											search
-										</li>
-										<li>
-											• Built shopping cart functionality with persistent
-											storage
-										</li>
-										<li>
-											• Integrated location services for delivery tracking
-										</li>
+										<li>• Integrated geofence service for attendance</li>
 										<li>
 											• Optimized app performance achieving 60fps across devices
 										</li>
-										<li>• Implemented deep linking for product sharing</li>
+										<li>
+											• Implemented deep linking for QR Code Multiple Client
+										</li>
 									</ul>
+								</div>
+								<div>
+									<h4 className="text-lg font-semibold text-white mb-3">
+										Link Project:
+									</h4>
+									<div className="flex flex-wrap gap-4">
+										<a
+											href="https://apps.apple.com/id/app/midsuit-essy/id6748378456"
+											className="text-cyan-500 hover:underline"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<Button>
+												<Image
+													src={icAppstore}
+													alt="Appstore"
+													className="max-w-4"
+												/>
+												Appstore
+											</Button>
+										</a>
+										<a
+											href="https://play.google.com/store/apps/details?id=com.midsuit.essy"
+											className="text-cyan-500 hover:underline"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<Button>
+												<Image
+													src={icPlaystore}
+													alt="Appstore"
+													className="max-w-4"
+												/>
+												Playstore
+											</Button>
+										</a>
+									</div>
 								</div>
 								<div>
 									<h4 className="text-lg font-semibold text-white mb-3">
@@ -169,19 +215,21 @@ export function ProjectsSection() {
 							<MotionHighlightItem value="saas-dashboard">
 								<Card className="bg-white/5 border-white/10">
 									<CardHeader>
-										<CardTitle className="text-white">SaaS Dashboard</CardTitle>
+										<CardTitle className="text-white">
+											Customer Support Chat System
+										</CardTitle>
 										<CardDescription className="text-gray-400">
-											Next.js • Java Spring Boot
+											React.js • Java
 										</CardDescription>
 									</CardHeader>
 									<CardContent className="pt-4">
 										<p className="text-gray-300 mb-4">
-											Modern web dashboard with real-time analytics, user
+											Modern web chat system with real-time messaging, user
 											management, and role-based access control.
 										</p>
 										<div className="flex flex-wrap gap-2">
 											<span className="bg-black/30 text-white px-2 py-1 rounded text-xs">
-												Next.js
+												React.js
 											</span>
 											<span className="bg-red-600/20 text-red-300 px-2 py-1 rounded text-xs">
 												Java
@@ -197,7 +245,7 @@ export function ProjectsSection() {
 						<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 border-gray-700">
 							<DialogHeader>
 								<DialogTitle className="text-2xl font-bold text-white mb-4">
-									SaaS Dashboard Platform
+									Customer Support Chat System
 								</DialogTitle>
 								<DialogDescription className="text-gray-300 text-base">
 									Enterprise-grade dashboard with advanced analytics and
@@ -207,9 +255,9 @@ export function ProjectsSection() {
 							<div className="space-y-6">
 								<div className="relative w-full h-64 rounded-lg overflow-hidden">
 									<Image
-										src="/projects/saas-dashboard.svg"
+										src={icIntegra}
 										alt="SaaS Dashboard Screenshot"
-										fill
+										objectPosition="center"
 										className="object-cover"
 									/>
 								</div>
@@ -219,15 +267,7 @@ export function ProjectsSection() {
 									</h4>
 									<ul className="space-y-2 text-gray-300">
 										<li>
-											• Developed microservices architecture with Spring Boot
-											and Spring Cloud
-										</li>
-										<li>
-											• Built real-time analytics dashboard with Chart.js and
-											D3.js
-										</li>
-										<li>
-											• Implemented multi-tenant SaaS architecture with tenant
+											• Implemented multi-tenant architecture with tenant
 											isolation
 										</li>
 										<li>
@@ -266,16 +306,13 @@ export function ProjectsSection() {
 									</h4>
 									<div className="flex flex-wrap gap-3">
 										<span className="bg-black/30 text-white px-3 py-2 rounded-lg">
-											Next.js 14
+											React.js
 										</span>
 										<span className="bg-red-600/20 text-red-300 px-3 py-2 rounded-lg">
-											Java Spring Boot
+											Java
 										</span>
 										<span className="bg-blue-600/20 text-blue-300 px-3 py-2 rounded-lg">
 											PostgreSQL
-										</span>
-										<span className="bg-green-600/20 text-green-300 px-3 py-2 rounded-lg">
-											Spring Security
 										</span>
 										<span className="bg-orange-600/20 text-orange-300 px-3 py-2 rounded-lg">
 											Redis
@@ -291,54 +328,52 @@ export function ProjectsSection() {
 
 					<Dialog>
 						<DialogTrigger asChild>
-							<MotionHighlightItem value="chat-app">
+							<MotionHighlightItem value="midsuit-landing">
 								<Card className="bg-white/5 border-white/10">
 									<CardHeader>
 										<CardTitle className="text-white">
-											Real-time Chat App
+											MidSuit Landing Page
 										</CardTitle>
 										<CardDescription className="text-gray-400">
-											React Native • Node.js
+											Next.js • TypeScript • Tailwind
 										</CardDescription>
 									</CardHeader>
 									<CardContent className="pt-4">
 										<p className="text-gray-300 mb-4">
-											Real-time messaging app with group chats, file sharing,
-											and push notifications.
+											Modern, responsive landing page for MidSuit business
+											solutions with advanced animations and optimized
+											performance.
 										</p>
 										<div className="flex flex-wrap gap-2">
+											<span className="bg-black/30 text-white px-2 py-1 rounded text-xs">
+												Next.js
+											</span>
 											<span className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs">
-												React Native
+												TypeScript
 											</span>
-											<span className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-xs">
-												Socket.io
-											</span>
-											<span className="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-xs">
-												Node.js
+											<span className="bg-cyan-600/20 text-cyan-300 px-2 py-1 rounded text-xs">
+												Tailwind CSS
 											</span>
 										</div>
 									</CardContent>
 								</Card>
 							</MotionHighlightItem>
 						</DialogTrigger>
+
 						<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 border-gray-700">
 							<DialogHeader>
 								<DialogTitle className="text-2xl font-bold text-white mb-4">
-									Real-time Chat Application
+									MIDSUIT Landing Page
 								</DialogTitle>
 								<DialogDescription className="text-gray-300 text-base">
-									Feature-rich messaging platform with advanced real-time
-									capabilities
+									Modern, high-converting landing page for MIDSUIT business
+									solutions platform
 								</DialogDescription>
 							</DialogHeader>
 							<div className="space-y-6">
-								<div className="relative w-full h-64 rounded-lg overflow-hidden">
-									<Image
-										src="/projects/chat-app.svg"
-										alt="Real-time Chat App Screenshot"
-										fill
-										className="object-cover"
-									/>
+								<div className="relative rounded-lg overflow-hidden justify-center items-center flex">
+									{/* Placeholder for MIDSUIT landing page screenshot */}
+									<Image src={icMidsuit} alt="MIDSUIT Landing Page" />
 								</div>
 								<div>
 									<h4 className="text-lg font-semibold text-white mb-3">
@@ -346,42 +381,50 @@ export function ProjectsSection() {
 									</h4>
 									<ul className="space-y-2 text-gray-300">
 										<li>
-											• Implemented real-time messaging using Socket.IO with
-											message queuing
+											• Designed and developed responsive landing page with
+											modern UI/UX principles
 										</li>
 										<li>
-											• Built group chat functionality with admin controls and
-											member management
+											• Implemented advanced scroll-triggered animations using
+											Framer Motion
 										</li>
 										<li>
-											• Developed file sharing system with support for images,
-											videos, and documents
+											• Built interactive hero section with dynamic
+											call-to-action buttons
 										</li>
 										<li>
-											• Created push notification system for offline message
-											delivery
+											• Created modular component system for easy content
+											management
 										</li>
 										<li>
-											• Implemented message encryption for enhanced security
+											• Developed services showcase with hover effects and
+											detailed modals
 										</li>
 										<li>
-											• Built typing indicators and read receipts for better
-											user experience
+											• Integrated contact forms with validation and email
+											submission
 										</li>
 										<li>
-											• Developed voice message recording and playback
-											functionality
+											• Implemented SEO optimization with meta tags and
+											structured data
 										</li>
 										<li>
-											• Created emoji reactions and message threading features
+											• Built testimonials carousel with auto-play and manual
+											controls
 										</li>
 										<li>
-											• Implemented user presence tracking (online/offline
-											status)
+											• Created pricing tables with interactive feature
+											comparisons
 										</li>
 										<li>
-											• Built message search and conversation history features
+											• Optimized performance achieving 95+ Lighthouse scores
 										</li>
+										<li>• Implemented dark/light theme toggle functionality</li>
+										<li>• Added progressive web app (PWA) capabilities</li>
+										<li>
+											• Built analytics integration for user behavior tracking
+										</li>
+										<li>• Created multi-language support with i18n</li>
 									</ul>
 								</div>
 								<div>
@@ -389,24 +432,54 @@ export function ProjectsSection() {
 										Technical Stack:
 									</h4>
 									<div className="flex flex-wrap gap-3">
-										<span className="bg-blue-600/20 text-blue-300 px-3 py-2 rounded-lg">
-											React Native
+										<span className="bg-black/30 text-white px-3 py-2 rounded-lg">
+											Next.js 14
 										</span>
-										<span className="bg-green-600/20 text-green-300 px-3 py-2 rounded-lg">
-											Socket.io
+										<span className="bg-blue-600/20 text-blue-300 px-3 py-2 rounded-lg">
+											TypeScript
+										</span>
+										<span className="bg-cyan-600/20 text-cyan-300 px-3 py-2 rounded-lg">
+											Tailwind CSS
 										</span>
 										<span className="bg-purple-600/20 text-purple-300 px-3 py-2 rounded-lg">
-											Node.js
+											Framer Motion
+										</span>
+										<span className="bg-green-600/20 text-green-300 px-3 py-2 rounded-lg">
+											React Hook Form
 										</span>
 										<span className="bg-orange-600/20 text-orange-300 px-3 py-2 rounded-lg">
-											MongoDB
-										</span>
-										<span className="bg-yellow-600/20 text-yellow-300 px-3 py-2 rounded-lg">
-											Firebase Cloud Messaging
+											Vercel
 										</span>
 										<span className="bg-red-600/20 text-red-300 px-3 py-2 rounded-lg">
-											AWS S3
+											EmailJS
 										</span>
+									</div>
+								</div>
+								<div>
+									<h4 className="text-lg font-semibold text-white mb-3">
+										Performance & Features:
+									</h4>
+									<div className="grid md:grid-cols-2 gap-4">
+										<div className="bg-white/5 p-4 rounded-lg">
+											<h5 className="text-white font-medium mb-2">
+												Performance
+											</h5>
+											<ul className="text-gray-300 text-sm space-y-1">
+												<li>• 95+ Lighthouse Score</li>
+												<li>• Under 2s Load Time</li>
+												<li>• Optimized Images</li>
+												<li>• Lazy Loading</li>
+											</ul>
+										</div>
+										<div className="bg-white/5 p-4 rounded-lg">
+											<h5 className="text-white font-medium mb-2">Features</h5>
+											<ul className="text-gray-300 text-sm space-y-1">
+												<li>• Responsive Design</li>
+												<li>• SEO Optimized</li>
+												<li>• PWA Ready</li>
+												<li>• Analytics Ready</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>

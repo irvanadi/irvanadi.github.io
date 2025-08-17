@@ -18,8 +18,25 @@ import {
 
 export function SkillsSection() {
 	return (
-		<AnimatedSection className="py-20 px-8 sm:px-20 snap-center" id="skills">
-			<div className="max-w-6xl mx-auto">
+		<AnimatedSection
+			className="relative py-20 px-8 sm:px-20 snap-center overflow-hidden"
+			id="skills"
+		>
+			{/* Professional background with geometric patterns */}
+			<div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950"></div>
+			<div className="absolute inset-0">
+				<div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl"></div>
+				<div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl"></div>
+			</div>
+			{/* Hexagonal pattern overlay */}
+			<div
+				className="absolute inset-0 opacity-[0.02]"
+				style={{
+					backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23ffffff' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E")`,
+					backgroundSize: "100px 100px",
+				}}
+			></div>
+			<div className="relative max-w-6xl mx-auto">
 				<AnimatedElement animation="fadeInUp">
 					<h2 className="text-4xl font-bold text-white text-center mb-16">
 						Technical Skills

@@ -10,15 +10,10 @@ const roboto = Roboto({
 	display: "swap",
 });
 
-// export const metadata: Metadata = {
-// 	title: "Irvan Adi Santoso | Full Stack Developer",
-// 	description:
-// 		"Personal portfolio of Irvan Adi Santoso, a full stack developer specializing in React, Node.js, and TypeScript.",
-// };
-
 export const metadata: Metadata = {
-	title: "Test",
-	description: "Test",
+	title: "Irvan Adi Santoso | Technical Consultant & Software Developer",
+	description:
+		"Personal portfolio of Irvan Adi Santoso, a technical consultant & Software Developer specializing in React, Node.js, and TypeScript.",
 };
 
 export default function RootLayout({
