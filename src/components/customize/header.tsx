@@ -70,7 +70,12 @@ const Header: React.FC<React.ComponentProps<"header">> = ({ ...props }) => {
 					</a>
 
 					{/* CTA Button */}
-					<Button className="ml-4 bg-gradient-to-r from-cyan-500 to-purple-500/20 hover:from-cyan-600 hover:to-purple-500/20  text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
+					<Button
+						className="ml-4 bg-gradient-to-r from-cyan-500 to-purple-500/20 hover:from-cyan-600 hover:to-purple-500/20  text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 cursor-pointer"
+						onClick={() =>
+							(window.location.href = "mailto:irvanxeno@example.com")
+						}
+					>
 						Contact Me
 					</Button>
 				</div>
