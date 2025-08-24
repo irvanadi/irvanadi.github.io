@@ -92,7 +92,10 @@ export function HeroSectionSideBySide() {
 								</a>
 								<Button
 									variant="outline"
-									className="border-gray-600 text-gray-300 hover:bg-gray-800 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg w-full sm:w-auto"
+									className="border-gray-600 text-gray-300 hover:bg-gray-800 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg w-full sm:w-auto cursor-pointer"
+									onClick={() =>
+										window.open("/Irvan_Adi_Santoso_Resume.pdf", "_blank")
+									}
 								>
 									Download CV
 								</Button>
